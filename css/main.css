@@ -1,0 +1,420 @@
+/*
+	Author: James Chung
+	Date: April 18, 2015
+	
+	Table of Content:
+		1. Main styling
+		2. Home section
+		3. Navigation menu - back to top
+		3. Portfolio Section
+		4. About Section
+		5. Skills Section
+		6. Contact Section
+		7. Media Queries
+		
+	Colour Scheme:
+		Dark grey: #303030
+		Light blue: #71D7FF
+		White: white;
+		Cyan: cyan
+		
+*/			
+
+/* --- Main styling
+----------------------------------------------------------------------------- */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Oswald', sans-serif;
+}
+/* Clear all default padding and margin from elements */
+body * {
+	margin: 0;
+	padding: 0;
+}
+	.fullPage, .mainSection {
+		clear: both;
+		width: 100%;
+		height: 100%;
+	}
+	/* Main content of the section - split in half */
+	.fullContent {
+		height: 100%;
+		width: 100%;
+	}
+	.leftContent {
+		float: left;
+		height: 100%;
+		width: 50%;
+	}
+	.rightContent {
+		float: right;
+		height: 100%;
+		width: 50%;
+	}
+	/* Default wrapper for content */
+	.contWrapper {
+		padding: 15px;
+		height: 100%;
+		width: 100%;
+	}
+	.hidden {
+		display: none;
+		visibility: hidden;
+	}
+
+/* --- Home section
+----------------------------------------------------------------------------- */
+
+/* Background color for home - left side */
+.leftContent.home {
+	background-color: #303030;
+}
+
+/* --- Home headings --- */
+#homeCont {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	text-align: center;
+	color: white;
+	width: 80%;
+	margin: 0 auto;
+}
+	#aboutDesc p:first-of-type{
+		font-size: 140%;
+	}
+	/* Home nav links */
+	#homeLinks {
+		position: absolute;
+		top: 0;
+		list-style-type: none;
+		width: 50%;
+		text-align: center;
+		margin: 10px 0;
+	}
+		#homeLinks li {
+			margin: 0 10px;
+			display: inline-block;
+		}
+		#homeLinks li a {
+			background-color: white;
+			color: black;
+			display: block;
+			font-size: 16px;
+			font-weight: bold;
+			padding: 5px 15px;
+			text-decoration: none; 
+			text-transform: uppercase;
+			-webkit-transition: 1s; /* For Safari 3.1 to 6.0 */
+			transition: 1s;
+		}
+		#homeLinks li a:hover {
+			background-color: cyan;
+		}
+		
+
+	/* Home logo */
+	#homeLogo img {
+		height: 150px;
+	}
+	
+	/* Home title */
+	#homeTitle {
+		margin: 10px 0;
+		text-transform: uppercase;
+	}
+		#homeTitle h1 {
+			font-size: 72px;
+		}
+		#homeTitle h2 {
+			font-size: 24px;
+		}
+	
+	/* Home social media links */
+	#homeSocMedia img {
+		height: 40px;
+		margin: 0 5px;
+	}
+	#homeSocMedia a {
+		opacity: 0.6;
+		-webkit-transition: 1s;
+		transition: 1s;
+	}
+	#homeSocMedia a:hover {
+		opacity: 1;
+	}
+	
+	/* About description */
+	#aboutDesc {
+		margin: 30px 0;
+	}
+		#aboutDesc p {
+			font-size: 120%;
+		}
+
+/* --- Home portfolio --- */
+	
+	/* Portfolio background */
+	.rightContent.home {
+		background-color: white;
+	}
+
+		#myCarousel {
+			/* filter: grayscale(100%); */
+		}
+		#myCarousel:hover {
+			/* filter: grayscale(0%); */
+		}
+		#myCarousel h1 {
+			font-weight: bold;
+			padding: 10px 0;
+			text-align: center;
+		}
+	
+		.portfolioSect {
+			height: 100%;
+		}
+		.carousel-inner > .next,
+		.carousel-inner > .prev {
+			position: absolute;
+			top: 15%;
+			margin: 0 auto;
+			width: 80%;
+		}
+		
+		/* Portfolio work */
+		.portfolioWork {
+			position: relative;
+			top: 15%;
+			width: 80%;
+			margin: 0 auto;
+		}
+			.portfolioWork h1 {
+				position: absolute;
+				top: 0;
+			}
+			.portfolioWork h2 {
+				font-weight: bold;
+				text-align: center;
+				margin: 10px 0;
+				text-transform: uppercase;
+			}
+			.portfolioWork img {
+				width: 100%;
+				height: 40%;
+				padding: 5px;
+				margin: 0 auto;
+			}
+			.portfolioWork p {
+				text-align: center;
+				font-size: 120%;
+				margin: 10px 0;
+			}
+	
+/* --- Navigation menu - back to top
+----------------------------------------------------------------------------- */
+#backToTop {
+	background-color: white;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	height: 45px;
+	width: 160px;
+	z-index: 100;
+	opacity: 0.4;
+	text-align: center;
+	-webkit-transition: 1s; /* For Safari 3.1 to 6.0 */
+	transition: 1s;
+}
+#backToTop:hover{
+	background-color: cyan;
+	opacity: 1;
+	cursor: pointer;
+}
+	#backToTop a, #backToTop a:hover, #backToTop a:visited, #backToTop a:link, #backToTop a:active {
+		color: #303030;
+		text-decoration: none;
+		display: block;
+	}
+	#backToTop span {
+		display: inline-block;
+	}
+	#backToTop h4 {
+		display: inline-block;
+		line-height: 45px;
+		text-transform: uppercase;
+	}
+
+/* --- Skills Section
+----------------------------------------------------------------------------- */
+
+#skills .fullContent {
+	background-color: #303030;
+}
+
+#skillsSect {
+	color: white;
+	margin: 0 auto;
+	position: relative;
+	width: 90%;
+}
+	#skillsSect h1 {
+		margin: 15px 0;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	#skillsSect h3 {
+		text-transform: uppercase;
+		margin: 25px 0;
+		text-align: center;
+	}
+	#skillsSect h4 {
+		margin: 10px 0 5px 0;
+		text-align: center;
+	}
+	#skillsSect .row {
+		width: 100%;
+	}
+	#skillsSect .col_5 {
+		border-left: 1px solid white;
+		display: inline-block;
+		margin: 0 auto;
+		width: 19.5%;
+	}
+	#skillsSect .col_5:first-of-type {
+		border-left: 0;
+	}
+	#skillsSect .col_5  h4 {
+		text-align: center;
+		font-weight: bold;
+	}
+	#skillsSect .arrow-down {
+		margin: 5px auto;
+		width: 0; 
+		height: 0; 
+		border-left: 60px solid transparent;
+		border-right: 60px solid transparent;
+		border-top: 12px solid white;
+	}
+
+.progress {
+	display: block;
+	clear: both;
+	height: 45px;
+	margin-bottom: 10px;
+}
+	
+	.progress-bar {
+		background-color: #71D7FF;
+	}
+	.progress-bar p {
+		color: #303030;
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 45px;
+		margin-left: 15px;
+		text-align: left;
+	}
+
+.codingLang h3, .graphicSoft h3 {
+	border-left: 0;
+}
+
+
+/* --- Contact Section
+----------------------------------------------------------------------------- */
+
+/* --- Background and banner for contact section --- */
+.rightContent.contact {
+	background-image: url('../img/chessPiece.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+.leftContent.contact {
+	background-color: #303030;
+}
+
+#contactSect {
+	color: white;
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 90%;
+}
+	#contactSect h2 {
+		margin: 5px 0;
+	}
+	#contactForm {
+		padding: 20px 0;
+	}
+	#contactForm input, #contactForm textarea {
+		color: #303030;
+		display: block;
+		margin: 10px 0;
+		width: 90%;
+	}
+	#contactForm input[type="submit"] {
+		border: 0;
+		background-color: white;
+		padding: 10px 25px;
+		width: 25%;
+	}
+		#contactForm input[type="submit"]:hover {
+			-webkit-transition: 1s;
+			transition: 1s;
+			background-color: cyan;
+		}
+	#followMe {
+		padding: 10px 0;
+	}
+		#followMe img {
+			width: 45px;
+		}
+		#followMe a {
+			opacity: 0.6;
+			-webkit-transition: 1s;
+			transition: 1s;
+		}
+		#followMe a:hover {
+			opacity: 1;
+		}
+	
+	footer {
+		width: 100%;
+		text-align: center;
+		margin: 10px 0px;
+		height: 25px;
+	}
+		footer p {
+			line-height: 25px;
+		}
+
+/* --- Media Queries
+----------------------------------------------------------------------------- */
+@media screen and (max-width: 1260px) {
+	.leftContent.home {
+		width: 100%;
+	}
+		ul#homeLinks{
+			text-align: center;
+		}
+	.rightContent.home {
+		width: 100%;
+	}
+	#homeLinks {
+		width: 100%;
+	}
+	.leftContent.contact {
+		width: 100%;
+	}
+	.rightContent.contact {
+		display: none;
+		visibility: hidden;
+	}
+}
